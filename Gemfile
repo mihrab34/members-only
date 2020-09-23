@@ -30,8 +30,11 @@ gem 'jbuilder', '~> 2.5'
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
 gem 'binding_of_caller', '~> 0.8.0'
+gem 'bootstrap', '~> 5.0.0.alpha1'
 gem 'devise', '~> 4.7', '>= 4.7.2'
 gem 'gravatar_image_tag', '~> 1.2'
+gem 'jquery-rails'
+gem 'mini_racer', '~> 0.3.1'
 gem 'simple_form', '~> 5.0', '>= 5.0.2'
 
 # Use Capistrano for deployment
