@@ -32,7 +32,7 @@
           
           <% if member_signed_in? %>
             <li class="nav-item">
-              <%= link_to "Edit Author", edit_member_registration_path, class: "nav-link m2" %>
+              <%= link_to current_member.name, edit_member_registration_path, class: "nav-link m2" %>
             </li>
             <li class="nav-item">
               <%= link_to 'New Post', new_post_path , class: "nav-link btn btn-lg btn-outline-dark mr-3 m2" %>
