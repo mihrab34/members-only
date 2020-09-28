@@ -6,8 +6,8 @@
 <% @posts.each do |post| %>
   <article>
     <div>
-      <h1>Post Title</h1>
-      <p>Post Body</p>
+      <h1><%= post.title %></h1>
+      <p><%= post.body %></p>
     </div>
   
     <nav>
