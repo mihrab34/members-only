@@ -29,15 +29,25 @@
       <a href="#"><%= link_to "Club Membership", root_path, class: 'navbar-brand' %></a>
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="nav navbar-nav ml-auto">
-        <li class="nav-item">
-            <%= link_to 'New Post', new_post_path , class: "nav-link btn m2" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign In", root_path, class: "nav-link btn m2" %>
-          </li>
-          <li class="nav-item">
-            <%= link_to "Sign Up", root_path, class: "nav-link btn m2" %>
-          </li>
+          
+          <% if member_signed_in? %>
+            <li class="nav-item">
+              <%= link_to "Edit Author", edit_member_registration_path, class: "nav-link m2" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to 'New Post', new_post_path , class: "nav-link btn btn-lg btn-outline-dark mr-3 m2" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign Out", destroy_member_session_path,method: :delete, class: "nav-link btn btn-lg btn-outline-dark m2" %>
+            </li>
+          <% else %>
+            <li class="nav-item">
+              <%= link_to "Sign In", new_member_session_path, class: "nav-link btn btn-lg btn-outline-dark  mr-3 m2" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Sign Up", new_member_registration_path, class: "nav-link btn btn-info btn-lg btn-outline-dark m2" %>
+            </li>
+          <% end %>
         </ul>
       </div>
     </div>
