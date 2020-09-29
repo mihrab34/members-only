@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action  only: %i[new create]
+  before_action only: %i[new create]
   before_action :authenticate_member!, except: %i[index show]
 
   # GET /posts
@@ -10,7 +10,9 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show; end
+  def show
+    set_post
+  end
 
   # GET /posts/new
   def new
@@ -18,7 +20,9 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit; end
+  def edit
+    set_post
+  end
 
   # POST /posts
   # POST /posts.json
