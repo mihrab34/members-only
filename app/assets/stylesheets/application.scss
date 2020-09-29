@@ -13,23 +13,16 @@
  *= require_tree .
  *= require_self
  */
- @import "bootstrap";
+@import "bootstrap";
 
- .navbar-brand {
+.navbar-brand {
   color: white;
 }
 
 .navbar-dark .navbar-nav .nav-link {
   color: #fff;
 }
-//round images
-.image {
-  border-radius: 50%;
-  img {
-    border-radius: 50%;
-  }
-}
 
-.notification:not(last-child) {
+.notification:not(:last-child) {
   margin-bottom: 0;
 }
