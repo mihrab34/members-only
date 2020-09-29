@@ -2,7 +2,7 @@
 <% @posts.each do |post| %>
       <div>
        <% if member_signed_in? %>
-          <% if !post.member.nil? %>
+          <% if post.member %>
             <%= post.member.name %>
           <% end %>
         <%end%>
