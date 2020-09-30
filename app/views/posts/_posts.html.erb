@@ -1,27 +1,12 @@
 
 <% @posts.each do |post| %>
-      <div>
-       <% if member_signed_in? %>
-          <% if post.member %>
-            <h3><%= post.member.name %></h3>
-          <% end %>
-        <%end%>
-         <h1><%= post.title %></h1>
-        <p><%= post.body %></p>
-        <% if member_signed_in? %>
-          <nav class="navbar">
-            <div class="nav navbar-nav ml-auto">
-              <%= link_to post do %>
-                <span class="icon"><i class="fa fa-link" aria-hidden="true"></i></span>
-              <% end %>
-              <%= link_to edit_post_path(post) do %>
-                <span class="icon"><i class="fa fa-pencil" aria-hidden="true"></i></span>
-              <% end %>
-              <%= link_to post, method: :delete, data: { confirm: 'Are you sure?' } do %>
-                  <span class="icon"><i class="fa fa-trash-o" aria-hidden="true"></i></span>
-                <% end %>
-            </div>
-          </nav>
-        <% end %>
-      </div>
-    <% end %>
+  <div>
+    <% if member_signed_in? %>
+      <% if post.member %>
+        <h3><%= post.member.name %></h3>
+      <% end %>
+    <%end%>
+    <h1><%= post.title %></h1>
+    <p><%= post.body %></p>
+  </div>
+<% end %>

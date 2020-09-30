@@ -10,9 +10,7 @@ class PostsController < ApplicationController
 
   # GET /posts/1
   # GET /posts/1.json
-  def show
-    set_post
-  end
+  def show; end
 
   # GET /posts/new
   def new
@@ -20,9 +18,7 @@ class PostsController < ApplicationController
   end
 
   # GET /posts/1/edit
-  def edit
-    set_post
-  end
+  def edit; end
 
   # POST /posts
   # POST /posts.json
