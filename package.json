@@ -1,5 +1,7 @@
 {
   "name": "members_app",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "autoprefixer": "^10.0.0"
+  }
 }

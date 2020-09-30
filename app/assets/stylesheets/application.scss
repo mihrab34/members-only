@@ -13,3 +13,16 @@
  *= require_tree .
  *= require_self
  */
+@import "bootstrap";
+
+.navbar-brand {
+  color: white;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+  color: #fff;
+}
+
+.notification:not(:last-child) {
+  margin-bottom: 0;
+}
